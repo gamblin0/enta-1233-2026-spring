@@ -2354,7 +2354,8 @@ MonoBehaviour:
   smoothTime: 0.05
   gravityMultiplier: 1
   speed: 5
-  jumpPower: 4
+  jumpPower: 2.5
+  maxNumberOfJumps: 2
 --- !u!1 &1646907341
 GameObject:
   m_ObjectHideFlags: 0
@@ -2441,13 +2442,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646907341}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.17150164, y: -0.6859936, z: 0.17150164, w: 0.6859936}
-  m_LocalPosition: {x: 12.75, y: 6.07, z: -16.74}
+  m_LocalRotation: {x: 0.40195724, y: -0.27147818, z: 0.12610239, w: 0.8653485}
+  m_LocalPosition: {x: 8.11, y: 15.22, z: -30.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 28.073, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 49.83, y: -34.836, z: 0}
 --- !u!114 &1646907345
 MonoBehaviour:
   m_ObjectHideFlags: 0
