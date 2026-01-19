@@ -124,7 +124,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""2D Vector"",
+                    ""name"": ""WASD"",
                     ""id"": ""225aa8e2-6a98-4d44-8d10-bdb8359df8d2"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
