@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,6 +18,11 @@ public class PlayerController : MonoBehaviour
     private float _velocity;
 
     [SerializeField] private float speed; //allows us to control speed
+
+    [SerializeField] private float jumpPower;
+
+    private int _numberOfjumps;
+    [SerializeField] private int maxNumberOfJumps = 2;
 
     private void Awake()
     {
@@ -48,7 +54,7 @@ public class PlayerController : MonoBehaviour
 
     private void ApplyGravity()
     {
-        if (_characterController.isGrounded && _velocity < 0.0f)
+        if (IsGrounded() && _velocity < 0.0f)
         {
             _velocity = -1.0f;
         }
@@ -67,5 +73,24 @@ public class PlayerController : MonoBehaviour
         _direction = new Vector3(_input.x, 0.0f, _input.y);
     }
 
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (!context.started) return; //when pressed space then jump if not don't
+        if (!IsGrounded() && _numberOfjumps >= maxNumberOfJumps) return; //if in the air and already max jumped don't jump
+        if (_numberOfjumps == 0) StartCoroutine(WaitForLanding());
+
+        _numberOfjumps++;
+        _velocity = jumpPower; //makes character jump
+    }
+
+    private IEnumerator WaitForLanding() //after landing, reset the jump amount so player can jump again
+    {
+        yield return new WaitUntil(() => !IsGrounded()); //wait until chracter is in the air
+        yield return new WaitUntil(IsGrounded);  //wait until character is on the ground
+
+        _numberOfjumps = 0;
+    }
+
+    private bool IsGrounded() => _characterController.isGrounded; //we can call IsGrounded innstead of writing _characterController.isGrounded
 
 }
