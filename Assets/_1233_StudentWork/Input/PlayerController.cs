@@ -24,6 +24,10 @@ public class PlayerController : MonoBehaviour
     private int _numberOfjumps;
     [SerializeField] private int maxNumberOfJumps = 2;
 
+
+    [SerializeField] private Animator _animator;
+    private static readonly int Speed = Animator.StringToHash("Speed");
+
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>(); //gets ChracterController Componnent
@@ -34,6 +38,7 @@ public class PlayerController : MonoBehaviour
         ApplyGravity();
         ApplyRotation();
         ApplyMovement();
+        AnimationParameters();
         
     }
 
@@ -45,7 +50,6 @@ public class PlayerController : MonoBehaviour
         var angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _currentVelocity, smoothTime); //makes the player rotation smooth
         transform.rotation = Quaternion.Euler(0.0f, angle, 0.0f); //
     }
-
 
     private void ApplyMovement()
     {
@@ -64,6 +68,11 @@ public class PlayerController : MonoBehaviour
         }
            
         _direction.y = _velocity;
+    }
+
+    private void AnimationParameters()
+    {
+        _animator?.SetFloat(Speed, _input.sqrMagnitude);
     }
 
 
