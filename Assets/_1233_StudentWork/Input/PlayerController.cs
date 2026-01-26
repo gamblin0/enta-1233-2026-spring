@@ -28,6 +28,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator _animator;
     private static readonly int Speed = Animator.StringToHash("Speed");
 
+    private static readonly int VerticalVelocity = Animator.StringToHash("VerticalVelocity");
+    private static readonly int IsGroundedAnim = Animator.StringToHash("IsGrounded");
+
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>(); //gets ChracterController Componnent
@@ -73,6 +76,8 @@ public class PlayerController : MonoBehaviour
     private void AnimationParameters()
     {
         _animator?.SetFloat(Speed, _input.sqrMagnitude);
+        _animator?.SetFloat(VerticalVelocity, _velocity);
+        _animator?.SetBool(IsGroundedAnim, IsGrounded());
     }
 
 
