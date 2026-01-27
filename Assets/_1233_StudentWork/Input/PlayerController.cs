@@ -28,8 +28,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator _animator;
     private static readonly int Speed = Animator.StringToHash("Speed");
 
-    private static readonly int VerticalVelocity = Animator.StringToHash("VerticalVelocity");
+   // private static readonly int VerticalVelocity = Animator.StringToHash("VerticalVelocity");
     private static readonly int IsGroundedAnim = Animator.StringToHash("IsGrounded");
+    private static readonly int JumpReq = Animator.StringToHash("JumpReq");
+    private bool _isJumping;
+
 
     private void Awake()
     {
@@ -76,8 +79,10 @@ public class PlayerController : MonoBehaviour
     private void AnimationParameters()
     {
         _animator?.SetFloat(Speed, _input.sqrMagnitude);
-        _animator?.SetFloat(VerticalVelocity, _velocity);
+        //_animator?.SetFloat(VerticalVelocity, _velocity);
         _animator?.SetBool(IsGroundedAnim, IsGrounded());
+        if (_isJumping) _animator?.SetTrigger(JumpReq);
+        _isJumping = false;
     }
 
 
@@ -93,6 +98,7 @@ public class PlayerController : MonoBehaviour
         if (!IsGrounded() && _numberOfjumps >= maxNumberOfJumps) return; //if in the air and already max jumped don't jump
         if (_numberOfjumps == 0) StartCoroutine(WaitForLanding());
 
+        _isJumping = true;
         _numberOfjumps++;
         _velocity = jumpPower; //makes character jump
     }
@@ -105,6 +111,6 @@ public class PlayerController : MonoBehaviour
         _numberOfjumps = 0;
     }
 
-    private bool IsGrounded() => _characterController.isGrounded; //we can call IsGrounded innstead of writing _characterController.isGrounded
+    private bool IsGrounded() => _characterController.isGrounded; //we can call IsGrounded instead of writing _characterController.isGrounded
 
 }
