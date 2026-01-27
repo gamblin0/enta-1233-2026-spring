@@ -6,14 +6,14 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Jump-Fall
+  m_Name: PlayerAnimController
   m_Controller: {fileID: 9100000, guid: 30171e97d3cc289408add00a1df70124, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: 297aec181100b0b4f8c1c50f9b23cae1, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 297aec181100b0b4f8c1c50f9b23cae1, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: bc9233680c79a2f48ae3f56e1fa1ab9d, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: bc9233680c79a2f48ae3f56e1fa1ab9d, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: 912781478fb034848b31c41d7cc37786, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 912781478fb034848b31c41d7cc37786, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 69848bb1239fc7d40841a545b20eca6b, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 69848bb1239fc7d40841a545b20eca6b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 297aec181100b0b4f8c1c50f9b23cae1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 297aec181100b0b4f8c1c50f9b23cae1, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 912781478fb034848b31c41d7cc37786, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 912781478fb034848b31c41d7cc37786, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: bc9233680c79a2f48ae3f56e1fa1ab9d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bc9233680c79a2f48ae3f56e1fa1ab9d, type: 2}
