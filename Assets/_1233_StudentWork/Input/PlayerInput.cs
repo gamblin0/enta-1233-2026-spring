@@ -109,6 +109,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CamSwitch"",
+                    ""type"": ""Button"",
+                    ""id"": ""a8087375-54f1-4c4a-b3da-68f6c78cf722"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -254,6 +263,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""032863c4-3178-4dc6-97df-50f0ae855541"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CamSwitch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -264,6 +284,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_PlayerDefault = asset.FindActionMap("PlayerDefault", throwIfNotFound: true);
         m_PlayerDefault_Move = m_PlayerDefault.FindAction("Move", throwIfNotFound: true);
         m_PlayerDefault_Jump = m_PlayerDefault.FindAction("Jump", throwIfNotFound: true);
+        m_PlayerDefault_CamSwitch = m_PlayerDefault.FindAction("CamSwitch", throwIfNotFound: true);
     }
 
     ~@PlayerInput()
@@ -346,6 +367,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private List<IPlayerDefaultActions> m_PlayerDefaultActionsCallbackInterfaces = new List<IPlayerDefaultActions>();
     private readonly InputAction m_PlayerDefault_Move;
     private readonly InputAction m_PlayerDefault_Jump;
+    private readonly InputAction m_PlayerDefault_CamSwitch;
     /// <summary>
     /// Provides access to input actions defined in input action map "PlayerDefault".
     /// </summary>
@@ -365,6 +387,10 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "PlayerDefault/Jump".
         /// </summary>
         public InputAction @Jump => m_Wrapper.m_PlayerDefault_Jump;
+        /// <summary>
+        /// Provides access to the underlying input action "PlayerDefault/CamSwitch".
+        /// </summary>
+        public InputAction @CamSwitch => m_Wrapper.m_PlayerDefault_CamSwitch;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -397,6 +423,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @CamSwitch.started += instance.OnCamSwitch;
+            @CamSwitch.performed += instance.OnCamSwitch;
+            @CamSwitch.canceled += instance.OnCamSwitch;
         }
 
         /// <summary>
@@ -414,6 +443,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @CamSwitch.started -= instance.OnCamSwitch;
+            @CamSwitch.performed -= instance.OnCamSwitch;
+            @CamSwitch.canceled -= instance.OnCamSwitch;
         }
 
         /// <summary>
@@ -468,5 +500,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnJump(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "CamSwitch" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCamSwitch(InputAction.CallbackContext context);
     }
 }
