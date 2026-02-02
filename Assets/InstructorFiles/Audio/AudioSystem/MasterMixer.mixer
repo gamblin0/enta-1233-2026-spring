@@ -14,6 +14,20 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &-7491488598549026589
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 230dbf1035a10ea4f967745341048a5a
+  m_EffectName: Attenuation
+  m_MixLevel: 109db60486ab0834985cf5aedf743dcc
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!243 &-6248966762705320467
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -29,6 +43,25 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 7633372555267410346}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &-4933666436418911211
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Jumping
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: f187ee2d61ee5094b9cbfb2be8728e4b
+  m_Children: []
+  m_Volume: a4ada1f89ec2288428d1f4188a0a4a37
+  m_Pitch: 10a77fafb8ac5c04f823f7af4634f2c7
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -3361328623891486736}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -52,6 +85,20 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &-3361328623891486736
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 85f4733120e5d8d4bbc1f49a07fa9fc0
+  m_EffectName: Attenuation
+  m_MixLevel: ab0045955d9aa474b8f72c9b2621748e
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &-1935516356696781009
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -85,6 +132,8 @@ AudioMixerGroupController:
   m_GroupID: d0d11369ff20642198a2d8ecb9db7693
   m_Children:
   - {fileID: -6248966762705320467}
+  - {fileID: 3360959763988806351}
+  - {fileID: -4933666436418911211}
   m_Volume: bd57178483ca240709dbd4918d0f9bfd
   m_Pitch: 2cdd5159eb878480d8cf530cca1e779f
   m_Send: 00000000000000000000000000000000
@@ -122,6 +171,8 @@ AudioMixerController:
     - d0d11369ff20642198a2d8ecb9db7693
     - e50ec3797535f4a269c79c29a46018bb
     - 7e02ef9d6737bd540af39a3e7cc76434
+    - daef1e7356b8fab4ead2554177017d8b
+    - f187ee2d61ee5094b9cbfb2be8728e4b
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -171,6 +222,25 @@ AudioMixerSnapshotController:
   m_SnapshotID: 2086100d4f5d54b44b2fab4e89273ffb
   m_FloatValues: {}
   m_TransitionOverrides: {}
+--- !u!243 &3360959763988806351
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Landing
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: daef1e7356b8fab4ead2554177017d8b
+  m_Children: []
+  m_Volume: e32dafe2ae0066043a90986f4057cc71
+  m_Pitch: e76455bbf5d6cc34eb8ffc8be20d5eda
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -7491488598549026589}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!244 &4427372204139443219
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
