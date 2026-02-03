@@ -287,6 +287,7 @@ GameObject:
   - component: {fileID: 453637204}
   - component: {fileID: 453637203}
   - component: {fileID: 453637208}
+  - component: {fileID: 453637209}
   m_Layer: 0
   m_Name: Character controller 2
   m_TagString: Untagged
@@ -453,6 +454,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &453637209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453637202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c204f1bb0b98754aaf0e81593c5c6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _footstepSource: {fileID: 1833483518}
+  _landingSource: {fileID: 1833483518}
+  _jumpingSource: {fileID: 1833483518}
 --- !u!1 &517749178
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,15 +868,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5515783359193845756, guid: 56b4a0ca8daa0154387f58eb3154ab99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.10067422
+      value: 0.0000002723528
       objectReference: {fileID: 0}
     - target: {fileID: -5515783359193845756, guid: 56b4a0ca8daa0154387f58eb3154ab99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.22122568
+      value: 0.0000025613226
       objectReference: {fileID: 0}
     - target: {fileID: -5515783359193845756, guid: 56b4a0ca8daa0154387f58eb3154ab99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -89.74688
+      value: -90.00001
       objectReference: {fileID: 0}
     - target: {fileID: -1428391190726431088, guid: 56b4a0ca8daa0154387f58eb3154ab99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -896,15 +912,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7214371169738337839, guid: 56b4a0ca8daa0154387f58eb3154ab99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.11245023
+      value: 0.00000027235603
       objectReference: {fileID: 0}
     - target: {fileID: 7214371169738337839, guid: 56b4a0ca8daa0154387f58eb3154ab99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -0.20400584
+      value: -0.0000051226425
       objectReference: {fileID: 0}
     - target: {fileID: 7214371169738337839, guid: 56b4a0ca8daa0154387f58eb3154ab99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 89.7375
+      value: 90.00001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1138,7 +1154,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 14.127317, y: 1.2033, z: 6.987924}
+  m_LocalScale: {x: 14.127317, y: 1.2033, z: 14.794134}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1611,7 +1627,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -4933666436418911211, guid: b1f0b53627654480da5b0b3f03b98ae2, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: fd7320aa6dc1ad345ae2100c607937b0, type: 3}
+  m_Resource: {fileID: 8300000, guid: 0954cae6f37d85d4b89c439913315a3b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
