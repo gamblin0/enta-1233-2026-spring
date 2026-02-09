@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System;
 using UnityEngine;
 
@@ -6,29 +7,25 @@ using UnityEngine;
 /// </summary>
 public class PlayerMgr : Singleton<PlayerMgr>
 {
-    /*
-    public override void Awake() {
-        base.Awake();
-    }*/
-    
-    /// <summary>
-    /// This script should be attached to the player object
-    /// Meant for single-player games where accessing the player object quickly is convenient
-    /// </summary>
-    public GameObject PlayerObject => gameObject;
+    [SerializeField] private GameObject _plyerPrefab;
+    public GameObject PlayerObject { get; private set; }    
+    public bool HasSpawnedPlayer => PlayerObject != null;
 
-    public void Move()
+    public void SpawnPlayer(Vector3 position, Quaternion rotation)
     {
-        throw new NotImplementedException("Player does not have a controller");
+        if (PlayerObject)
+        {
+            Debug.LogError("Player already spawnned!");
+            return;
+        }
+
+        PlayerObject = Instantiate(_plyerPrefab, position, rotation);
+        Debug.Log("Player spwned");
+
+        
     }
-    
-    /// <summary>
-    /// Handles the player using the pause input action
-    /// TODO move to player input handler separate from player controller
-    /// </summary>
     public void PauseInput()
     {
-        // Run pause from game manager
         GameMgr.Instance.PauseGameToggle();
     }
 }
