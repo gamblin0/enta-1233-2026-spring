@@ -37,6 +37,7 @@ Transform:
   - {fileID: 2784772530349658997}
   - {fileID: 4653617168911849531}
   - {fileID: 6915959036823857909}
+  - {fileID: 783072959503067445}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1195203265444647779
@@ -65,7 +66,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _willNotDestroyOnLoad: 0
-  _plyerPrefab: {fileID: 0}
+  _playerPrefab: {fileID: 385956088163585430, guid: a49185019e5fe3f4da48c424d0a813a8, type: 3}
 --- !u!114 &8747167066922387038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,6 +207,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4171441546891069250, guid: 0209e3999a2ab334fad1dff7ae89620b, type: 3}
   m_PrefabInstance: {fileID: 1772297138149821712}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4307903851634382844
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6916092305057673378}
+    m_Modifications:
+    - target: {fileID: 3537215835138473673, guid: 7b4eed60bc1366942989ff82d6e21231, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 960
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537215835138473673, guid: 7b4eed60bc1366942989ff82d6e21231, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 540
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537215835138473673, guid: 7b4eed60bc1366942989ff82d6e21231, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537215835138473673, guid: 7b4eed60bc1366942989ff82d6e21231, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537215835138473673, guid: 7b4eed60bc1366942989ff82d6e21231, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537215835138473673, guid: 7b4eed60bc1366942989ff82d6e21231, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537215835138473673, guid: 7b4eed60bc1366942989ff82d6e21231, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537215835138473673, guid: 7b4eed60bc1366942989ff82d6e21231, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537215835138473673, guid: 7b4eed60bc1366942989ff82d6e21231, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537215835138473673, guid: 7b4eed60bc1366942989ff82d6e21231, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7005690410791084278, guid: 7b4eed60bc1366942989ff82d6e21231, type: 3}
+      propertyPath: m_Name
+      value: LevelMgr
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7b4eed60bc1366942989ff82d6e21231, type: 3}
+--- !u!4 &783072959503067445 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3537215835138473673, guid: 7b4eed60bc1366942989ff82d6e21231, type: 3}
+  m_PrefabInstance: {fileID: 4307903851634382844}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4653635753470769152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -214,6 +277,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6916092305057673378}
     m_Modifications:
+    - target: {fileID: 4627058941732817289, guid: 275b2fcd5e9d84cab82c4650ca486b5a, type: 3}
+      propertyPath: _levelCompleteMenuPrefab
+      value: 
+      objectReference: {fileID: 1176791381407774602, guid: 9ca56bb3c1e78d74cb503c803485f2ad, type: 3}
     - target: {fileID: 7363516041045961589, guid: 275b2fcd5e9d84cab82c4650ca486b5a, type: 3}
       propertyPath: m_Pivot.x
       value: 0

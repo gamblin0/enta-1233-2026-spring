@@ -36,7 +36,12 @@ public class GameStarter : MonoBehaviour
 
         Debug.Log("Game starting in 3 seconds...");
         yield return new WaitForSeconds(1f);
+        Debug.Log("Game starting in 2 seconds...");
+        yield return new WaitForSeconds(1f);
+        Debug.Log("Game starting in 1 seconds...");
+        yield return new WaitForSeconds(1f);
 
+        GameMgr.Instance.StartGame();   
 
     }
 }

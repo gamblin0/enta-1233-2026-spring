@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class PlayerMgr : Singleton<PlayerMgr>
 {
-    [SerializeField] private GameObject _plyerPrefab;
+    [SerializeField] private GameObject _playerPrefab;
     public GameObject PlayerObject { get; private set; }    
     public bool HasSpawnedPlayer => PlayerObject != null;
 
@@ -19,7 +19,7 @@ public class PlayerMgr : Singleton<PlayerMgr>
             return;
         }
 
-        PlayerObject = Instantiate(_plyerPrefab, position, rotation);
+        PlayerObject = Instantiate(_playerPrefab, position, rotation);
         Debug.Log("Player spwned");
 
         
