@@ -16,6 +16,10 @@ public class LevelMgr : Singleton<LevelMgr>
         StartCoroutine(LoadLevelRoutine());
     }
 
+    public void LevelIncrease()
+    {
+        _currentLevelIndex++;
+    }
     private IEnumerator LoadLevelRoutine()
     {
         string levelName = _levelSceneNames[_currentLevelIndex];

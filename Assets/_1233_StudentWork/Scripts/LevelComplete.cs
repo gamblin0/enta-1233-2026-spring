@@ -11,6 +11,7 @@ public class LevelComplete : MenuBase
 
     public void ButtonNextLevel()
     {
+        LevelMgr.Instance.LevelIncrease();
         SceneMgr.Instance.LoadScene(GameScenes.Gameplay, GameMenus.InGameUI);
     }
 
