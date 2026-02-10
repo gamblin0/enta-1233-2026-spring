@@ -27000,14 +27000,14 @@ AnimationClip:
   - time: 0.1
     functionName: PlayFootstep
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 8300000, guid: bebeb7d4f3c3ebd42a706af258704095, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.5
     functionName: PlayFootstep
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 8300000, guid: bebeb7d4f3c3ebd42a706af258704095, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
