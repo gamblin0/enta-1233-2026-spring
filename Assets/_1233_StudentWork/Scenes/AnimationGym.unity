@@ -609,17 +609,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5364077897011728271, guid: 660916a18eb7c73498218ce95fc0be11, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 22100000, guid: 4634b7458e36d7c42b21e8df3be449cd, type: 2}
     - target: {fileID: 7552773749817666625, guid: 660916a18eb7c73498218ce95fc0be11, type: 3}
       propertyPath: m_Name
       value: Practice Dummy
-      objectReference: {fileID: 0}
-    - target: {fileID: 8081741253036922895, guid: 660916a18eb7c73498218ce95fc0be11, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.635
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
