@@ -1,4 +1,4 @@
-using UnityEditor.ShaderGraph.Configuration;
+
 using UnityEngine;
 
 public class PlayerTargetProvider : MonoBehaviour, ITargetProvider
@@ -13,7 +13,7 @@ public class PlayerTargetProvider : MonoBehaviour, ITargetProvider
         return null;
     }
 
-    public Vector3 GetTargetPositiion()
+    public Vector3 GetTargetPosition()
     {
         if (!HasTarget) return PlayerMgr.Instance.PlayerObject.transform.position + _offset;
         return transform.position;
