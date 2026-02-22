@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Practice Dummy Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8158369870608234354, guid: a6e59bc5d53a7f34bb5473a1de36de0b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.635
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6114504858974769632, guid: a6e59bc5d53a7f34bb5473a1de36de0b, type: 3}
     m_RemovedGameObjects: []
