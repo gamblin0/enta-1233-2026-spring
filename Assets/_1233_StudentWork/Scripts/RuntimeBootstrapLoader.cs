@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public static class RunntimeBootstrapLoader
+public static class RuntimeBootstrapLoader
 {
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Initialize()
