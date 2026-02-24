@@ -25,7 +25,7 @@ public class Projectile : MonoBehaviour
         if (collision.gameObject == _source) return;
 
         //check if we hit something damageable
-        var damageReciever = collision.gameObject.GetComponent<IDamageReciever>();
+        var damageReciever = collision.gameObject.GetComponentInParent<IDamageReciever>();
         if (damageReciever != null)
         {
             var info = new DamageInfo

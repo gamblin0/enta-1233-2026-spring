@@ -111,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: {fileID: 6193961057129752345}
   _patrolMotor: {fileID: 4169001682769458798}
-  _contactDamage: {fileID: 0}
+  _contactDamage: {fileID: 668299331424295769}
   _animatorDriver: {fileID: 2935787862403679028}
 --- !u!54 &2644803732138261882
 Rigidbody:
