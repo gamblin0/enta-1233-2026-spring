@@ -60,7 +60,9 @@ public class ProjectileWeapon : MonoBehaviour, IWeapon
             Mathf.Sqrt(Mathf.Abs(2 * (displacementY - height) / gravity));
         var velocityY = Vector3.up * Mathf.Sqrt(-2 * gravity * height);
         var velocityXZ = displacementXZ / time;
+
         Debug.Log($"{displacementY}  /  {height} and {gravity}");
+
         return velocityXZ + velocityY * -Mathf.Sign(gravity);
 
     }

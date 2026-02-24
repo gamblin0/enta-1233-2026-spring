@@ -1,0 +1,22 @@
+using UnityEngine;
+using UnityEngine.AI;
+
+[RequireComponent (typeof(NavMeshAgent))]
+public sealed class NavMeshAgentMover : MonoBehaviour
+{
+    [SerializeField] private NavMeshAgent _agent;
+
+    //public getters for agent related info
+    public Vector3 Velocity => _agent.velocity;
+    public bool HasPath => _agent.hasPath;
+
+    public void SetDestination(Vector3 worldPos)
+    {
+        _agent.SetDestination(worldPos);
+    }
+
+    public void Stop()
+    {
+        _agent?.ResetPath();
+    }
+}

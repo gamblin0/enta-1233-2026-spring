@@ -29,7 +29,7 @@ public class SnakeChaseState : EnemyState
         
         if (distance <= _brain.AttackRange)
         {
-            Debug.Log("switchung");
+            Debug.Log("switching");
             Machine.ChangeState(new SnakeAttackState(_brain, Machine));
         }
         
