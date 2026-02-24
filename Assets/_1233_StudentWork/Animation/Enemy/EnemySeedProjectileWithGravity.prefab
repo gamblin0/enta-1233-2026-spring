@@ -10,23 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1522698491634970850, guid: 1bd88ac02f3dd28459cabec3382de3da, type: 3}
       propertyPath: m_Name
-      value: BaseProjectile Variant 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3238882275930798256, guid: 1bd88ac02f3dd28459cabec3382de3da, type: 3}
-      propertyPath: _useGravity
-      value: 1
+      value: EnemySeedProjectileWithGravity
       objectReference: {fileID: 0}
     - target: {fileID: 7888683962963598377, guid: 1bd88ac02f3dd28459cabec3382de3da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.9673758
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7888683962963598377, guid: 1bd88ac02f3dd28459cabec3382de3da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.91845876
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7888683962963598377, guid: 1bd88ac02f3dd28459cabec3382de3da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.542923
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7888683962963598377, guid: 1bd88ac02f3dd28459cabec3382de3da, type: 3}
       propertyPath: m_LocalRotation.w

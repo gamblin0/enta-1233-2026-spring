@@ -15,7 +15,7 @@ public class PlayerTargetProvider : MonoBehaviour, ITargetProvider
 
     public Vector3 GetTargetPosition()
     {
-        if (!HasTarget) return PlayerMgr.Instance.PlayerObject.transform.position + _offset;
+        if (HasTarget) return PlayerMgr.Instance.PlayerObject.transform.position + _offset;
         return transform.position;
     }
 }

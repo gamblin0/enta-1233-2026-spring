@@ -39,12 +39,13 @@ public class ProjectileWeapon : MonoBehaviour, IWeapon
 
         var velocity = CalculateArcVelocity(_muzzle.position, targetPosition, _arcHeight);
         var projectile = Instantiate(_projectilePrefab, _muzzle.position, _muzzle.rotation);
-        projectile.LaunchWithVelocity(velocity, gameObject);           
+        Debug.Log($"B {velocity}");
+        projectile.LaunchWithVelocity(velocity, gameObject); 
     }
 
     private void SpawnProjectile(Vector3 direction)
     {
-        var projectile = Instantiate(_projectilePrefab, -_muzzle.position,
+        var projectile = Instantiate(_projectilePrefab, _muzzle.position,
             Quaternion.LookRotation(direction));
         projectile.Launch(direction, gameObject);
     }
@@ -56,10 +57,10 @@ public class ProjectileWeapon : MonoBehaviour, IWeapon
         var gravity = Physics.gravity.y;
 
         var time = Mathf.Sqrt(-2 * height / gravity) +
-            Mathf.Sqrt(2 * (displacementY - height) / gravity);
+            Mathf.Sqrt(Mathf.Abs(2 * (displacementY - height) / gravity));
         var velocityY = Vector3.up * Mathf.Sqrt(-2 * gravity * height);
         var velocityXZ = displacementXZ / time;
-
+        Debug.Log($"{displacementY}  /  {height} and {gravity}");
         return velocityXZ + velocityY * -Mathf.Sign(gravity);
 
     }

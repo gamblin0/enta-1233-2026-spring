@@ -26,6 +26,13 @@ public class SnakeChaseState : EnemyState
 
         //4. if we are close enough, switch to atttack state
         var distance = Vector3.Distance(_brain.transform.position, target.position);
-        if (distance <= _brain.AttackRange) Machine.ChangeState(new SnakeAttackState(_brain, Machine));
+        
+        if (distance <= _brain.AttackRange)
+        {
+            Debug.Log("switchung");
+            Machine.ChangeState(new SnakeAttackState(_brain, Machine));
+        }
+        
+       
     }
 }
