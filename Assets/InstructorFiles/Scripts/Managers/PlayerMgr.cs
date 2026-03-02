@@ -28,4 +28,9 @@ public class PlayerMgr : Singleton<PlayerMgr>
     {
         GameMgr.Instance.PauseGameToggle();
     }
+
+    public void DebugAssignAsPlayer(GameObject existingPlayer)
+    {
+        PlayerObject = existingPlayer;
+    }
 }
