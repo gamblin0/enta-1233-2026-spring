@@ -40,17 +40,21 @@ public class TrainingDummyBrain : MonoBehaviour
             $"{info.Source?.name ?? "Unknown"} " +
             $"for {info.Amount} damage" +
             $"HP: {_health.CurrentHealth}/{_health.MaxHealth}");
+        if (_health.CurrentHealth > 0)
         _animatorDriver?.TriggerHit();
     }
 
     private void HandleDied()
     {
         Debug.Log("[Dummy] Died! Resetting..");
+        _animatorDriver?.TriggerDie();
         if (_autoReset) Invoke(nameof(ResetDummy), _resetDelay);
+        
     }
 
     private void ResetDummy()
     {
+        _animatorDriver.TriggerHit();
         _health.ResetHealth();
     }
 }
