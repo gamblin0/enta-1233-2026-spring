@@ -13,16 +13,19 @@ public class SnakeChaseState : EnemyState
     {
         //1. get player position
         var target = _brain.TargetProvider.GetTarget();
-        if (target == null) return;
+        if (target == null || !_brain.Detection.IsTargetInDetectionRange(target))
+        {
+            Machine.ChangeState(new SnakeIdleState(_brain, Machine));
+            return;
+        }
 
         //2. tell mover to go there
         _brain.Mover?.SetDestination(target.position);
 
         //3. update anims based on movemennt speed
-        if (_brain.Mover != null)
-            _brain.AnimatorDriver.SetSpeed(_brain.Mover.Velocity.magnitude);
-        else
-            _brain.AnimatorDriver.SetSpeed(0);
+        
+        _brain.AnimatorDriver.SetSpeed(_brain.Mover?.Velocity.magnitude ?? 0f);
+        
 
         //4. if we are close enough, switch to atttack state
         var distance = Vector3.Distance(_brain.transform.position, target.position);
