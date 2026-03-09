@@ -8,21 +8,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1889987876071492219, guid: 4abfd0e66fbd6cb4a81ea9fb00bb9f90, type: 3}
+      propertyPath: _projectilePrefab
+      value: 
+      objectReference: {fileID: 3238882275930798256, guid: 1bd88ac02f3dd28459cabec3382de3da, type: 3}
+    - target: {fileID: 3323882424567246493, guid: 4abfd0e66fbd6cb4a81ea9fb00bb9f90, type: 3}
+      propertyPath: _mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6804820497401856281, guid: 4abfd0e66fbd6cb4a81ea9fb00bb9f90, type: 3}
       propertyPath: m_Name
       value: EnemyBud Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8854938008950542925, guid: 4abfd0e66fbd6cb4a81ea9fb00bb9f90, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 9.84
       objectReference: {fileID: 0}
     - target: {fileID: 8854938008950542925, guid: 4abfd0e66fbd6cb4a81ea9fb00bb9f90, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.00000011920929
       objectReference: {fileID: 0}
     - target: {fileID: 8854938008950542925, guid: 4abfd0e66fbd6cb4a81ea9fb00bb9f90, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -14.767215
       objectReference: {fileID: 0}
     - target: {fileID: 8854938008950542925, guid: 4abfd0e66fbd6cb4a81ea9fb00bb9f90, type: 3}
       propertyPath: m_LocalRotation.w
