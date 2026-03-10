@@ -62,10 +62,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void H()
-    {
-        throw new System.NotImplementedException();
-    }
+   
 
     private void Update()
     {

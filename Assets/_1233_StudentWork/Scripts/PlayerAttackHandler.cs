@@ -6,6 +6,6 @@ public class PlayerAttackHandler : MonoBehaviour
 
     private void Attack()
     {
-
+        Debug.Log("Player Attacked");
     }
 }
