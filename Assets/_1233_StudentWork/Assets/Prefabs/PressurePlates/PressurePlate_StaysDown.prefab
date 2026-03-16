@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4165693920493876880, guid: 3e93d0ca2cb00ab45a277ed5cb548c13, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 47.397026
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4165693920493876880, guid: 3e93d0ca2cb00ab45a277ed5cb548c13, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6447318
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4165693920493876880, guid: 3e93d0ca2cb00ab45a277ed5cb548c13, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.675022
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4165693920493876880, guid: 3e93d0ca2cb00ab45a277ed5cb548c13, type: 3}
       propertyPath: m_LocalRotation.w
@@ -54,10 +54,32 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 296a20c3f519ee246b38c1bc5f665459, type: 2}
     - target: {fileID: 8904925785837214774, guid: 3e93d0ca2cb00ab45a277ed5cb548c13, type: 3}
       propertyPath: m_Name
-      value: PressurePlate Variant
+      value: PressurePlate_StaysDown
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3416081185475072963, guid: 3e93d0ca2cb00ab45a277ed5cb548c13, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8904925785837214774, guid: 3e93d0ca2cb00ab45a277ed5cb548c13, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3530589378959003293}
   m_SourcePrefab: {fileID: 100100000, guid: 3e93d0ca2cb00ab45a277ed5cb548c13, type: 3}
+--- !u!1 &1984330289338113396 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8904925785837214774, guid: 3e93d0ca2cb00ab45a277ed5cb548c13, type: 3}
+  m_PrefabInstance: {fileID: 6925805258174153026}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3530589378959003293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984330289338113396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2427b87d2a1b23b438ee21be1d6b2c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 0}

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4084216115529643850}
   - component: {fileID: 7106385866113673177}
   - component: {fileID: 52624311509659755}
+  - component: {fileID: 8757753064307167280}
   m_Layer: 0
   m_Name: Character controller 2
   m_TagString: Player
@@ -207,6 +208,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: {fileID: 7106385866113673177}
   _damageMultiplier: 1
+--- !u!54 &8757753064307167280
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385956088163585430}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6902145834640299028
 GameObject:
   m_ObjectHideFlags: 0
