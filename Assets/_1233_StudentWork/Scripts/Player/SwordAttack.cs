@@ -42,8 +42,8 @@ public class SwordAttack : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        if (attackOrigin != null) return;
-        if (attackOrigin = null) Debug.Log("Gizmo cant be drawn");
+        if (attackOrigin == null) return;
+        
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackOrigin.position, attackRadius);

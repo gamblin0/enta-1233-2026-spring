@@ -83,6 +83,8 @@ MonoBehaviour:
   _levelSceneNames:
   - Level_1
   - Level_2
+  - Level_3
+  - Level_4
 --- !u!1001 &1317282792931358156
 PrefabInstance:
   m_ObjectHideFlags: 0

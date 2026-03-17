@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class PlayerAttackHandler : MonoBehaviour
 {
-    [SerializeField] PlayerController _controller;
+    [SerializeField] SwordAttack _swordAttack;
 
     private void Attack()
     {
-        Debug.Log("Player Attacked");
+        _swordAttack.PerformAttack();
     }
 }

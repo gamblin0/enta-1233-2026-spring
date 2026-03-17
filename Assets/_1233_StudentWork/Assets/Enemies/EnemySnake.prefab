@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1387009629377862380}
   - component: {fileID: 6456661850888158216}
+  - component: {fileID: 2117880704316550276}
   m_Layer: 12
   m_Name: Collider
   m_TagString: Untagged
@@ -57,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 3000640890677730543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.605, z: -0.035}
+  m_LocalPosition: {x: 0, y: 0.633, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86,6 +87,20 @@ CapsuleCollider:
   m_Height: 1.27
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2117880704316550276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000640890677730543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174d9556af9b8dc45a6ce94196e1019b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: {fileID: 8227193929058309388}
+  _damageMultiplier: 1
 --- !u!1 &4447202978349598304
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,6 +150,8 @@ GameObject:
   - component: {fileID: 5180001721325604427}
   - component: {fileID: 7521655759739501620}
   - component: {fileID: 939781910368433131}
+  - component: {fileID: 4267192851015835504}
+  - component: {fileID: 8836893838846831241}
   m_Layer: 12
   m_Name: EnemySnake
   m_TagString: Untagged
@@ -262,6 +279,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261fee6548d288d44ae1a58324cb7f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!195 &4267192851015835504
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850780595976911594}
+  m_Enabled: 1
+  m_AgentTypeID: 1479372276
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 12
+  avoidancePriority: 50
+  m_AngularSpeed: 360
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &8836893838846831241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850780595976911594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015865905400729458c1de2fb8ca84dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _agent: {fileID: 4267192851015835504}
 --- !u!1001 &4909849019957998796
 PrefabInstance:
   m_ObjectHideFlags: 0
