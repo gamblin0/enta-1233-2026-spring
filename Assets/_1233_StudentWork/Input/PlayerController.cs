@@ -26,6 +26,16 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private Health _health;
 
+    [SerializeField] private bool _isAttacking;
+
+    [SerializeField] private Grenade _grenadePrefab;
+
+    [SerializeField] private float _grenadeThrowForce = 12f;
+
+    [SerializeField] private float _grenadeArcAngle = 30f;
+
+    
+
 
     [SerializeField] private Animator _animator;
     private static readonly int Speed = Animator.StringToHash("Speed");
@@ -86,6 +96,9 @@ public class PlayerController : MonoBehaviour
     {
         _characterController.Move(_direction * speed * Time.deltaTime); // allows us to move and makes it depend on frame rate
     }
+
+   
+
 
     private void ApplyGravity()
     {
