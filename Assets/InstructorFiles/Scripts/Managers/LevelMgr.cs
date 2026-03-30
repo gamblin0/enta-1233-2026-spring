@@ -1,14 +1,28 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelMgr : Singleton<LevelMgr>
 {
-    [SerializeField] private string[] _levelSceneNames;
+    [Serializable]
+    public class LevelData
+    {
+        public string SceneName;
+        public string LevelName;
+        public Sprite LevelIcon;    
+    }
+    [SerializeField] private LevelData[] _allLevelData;
+    public LevelData[] AllLevelData => _allLevelData;
 
     private int _currentLevelIndex;
 
     public bool IsLevelLoaded { get; private set; }
+
+    public void SetCurrentLevel(int currentLevelIndex)
+    {
+        _currentLevelIndex = currentLevelIndex;
+    }
 
     public void LoadCurrentLevel()
     {
@@ -22,7 +36,7 @@ public class LevelMgr : Singleton<LevelMgr>
     }
     private IEnumerator LoadLevelRoutine()
     {
-        string levelName = _levelSceneNames[_currentLevelIndex];
+        string levelName = _allLevelData[_currentLevelIndex].LevelName;
 
         Debug.Log($"LevelMgr: Loading {levelName} additively");
 
