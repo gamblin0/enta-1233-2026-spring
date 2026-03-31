@@ -36,11 +36,11 @@ public class LevelMgr : Singleton<LevelMgr>
     }
     private IEnumerator LoadLevelRoutine()
     {
-        string levelName = _allLevelData[_currentLevelIndex].LevelName;
+        string sceneName = _allLevelData[_currentLevelIndex].SceneName;
 
-        Debug.Log($"LevelMgr: Loading {levelName} additively");
+        Debug.Log($"LevelMgr: Loading {sceneName} additively");
 
-        var asyncOperation = SceneManager.LoadSceneAsync(levelName,LoadSceneMode.Additive);
+        var asyncOperation = SceneManager.LoadSceneAsync(sceneName,LoadSceneMode.Additive);
 
         while (asyncOperation is { isDone: false}) yield return null;
 
