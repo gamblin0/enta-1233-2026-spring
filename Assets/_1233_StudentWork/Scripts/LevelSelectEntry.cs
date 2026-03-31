@@ -18,7 +18,12 @@ public class LevelSelectEntry : MonoBehaviour
     #endregion
 
     private int _levelIndex;
-    
+
+    private void Awake()
+    {
+        if (_button == null) _button = GetComponent<Button>();
+    }
+
     public void Setup(string level, int levelIndex)
     {
         _levelIndex = levelIndex;

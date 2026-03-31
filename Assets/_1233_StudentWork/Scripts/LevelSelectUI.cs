@@ -28,7 +28,7 @@ public class LevelSelectUI : MenuBase
         for (var i = 0; i < levels.Length; i++)
         {
             var entry = Instantiate(_entryPrefab, _contentParent);
-           // entry.Setup(levels[i], i);
+            entry.Setup(levels[i].SceneName, i);
         }
     }
 }
