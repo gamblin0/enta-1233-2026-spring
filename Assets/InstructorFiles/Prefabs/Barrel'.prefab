@@ -198,7 +198,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.7849341, y: 1.04, z: 4.1686535}
-  m_LocalScale: {x: 1, y: 0.83734, z: 1}
+  m_LocalScale: {x: 0.71716, y: 0.6005067, z: 0.71716}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7721398783246038701}
@@ -446,14 +446,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d12cd4cd02610d241b164bd0a38da160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRadius: 4
+  detectionRadius: 3.1
   detectionLayers:
     serializedVersion: 2
     m_Bits: 4096
   explosionRadius: 5
   explosionForce: 600
   explosionDamage: 60
-  explosionEffect: {fileID: 0}
+  explosionEffect: {fileID: 8179382559375875649, guid: 12f0befaaf9badc488de88f5ef314b3d, type: 3}
 --- !u!1 &6415988338566651151
 GameObject:
   m_ObjectHideFlags: 0

@@ -2854,15 +2854,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6657426868401858743, guid: b3d0b42d08ca94749bcab9411a235f97, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.97
+      value: 32.2
       objectReference: {fileID: 0}
     - target: {fileID: 6657426868401858743, guid: b3d0b42d08ca94749bcab9411a235f97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.01
+      value: 1.504
       objectReference: {fileID: 0}
     - target: {fileID: 6657426868401858743, guid: b3d0b42d08ca94749bcab9411a235f97, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.09
+      value: -0.167
       objectReference: {fileID: 0}
     - target: {fileID: 6657426868401858743, guid: b3d0b42d08ca94749bcab9411a235f97, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2892,10 +2892,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7238139163882236753, guid: b3d0b42d08ca94749bcab9411a235f97, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 5491824a217f0384282fb34c1a34cce2, type: 2}
     - target: {fileID: 8717075950025485872, guid: b3d0b42d08ca94749bcab9411a235f97, type: 3}
       propertyPath: m_Name
       value: GoalBox
