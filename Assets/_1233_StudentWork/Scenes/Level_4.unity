@@ -1960,6 +1960,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyBloom Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7795561983066354214, guid: 1ab6a5d644a7bee4badd9f783cc2455b, type: 3}
+      propertyPath: _maxHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8906432626394937078, guid: 1ab6a5d644a7bee4badd9f783cc2455b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.25

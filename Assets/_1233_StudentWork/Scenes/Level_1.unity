@@ -2348,10 +2348,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4775925513276132116, guid: 308d00a442d3f2c4194924062ab43b03, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8838367715710452720, guid: 308d00a442d3f2c4194924062ab43b03, type: 3}
       propertyPath: m_Name
       value: KillBox
