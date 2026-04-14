@@ -283,11 +283,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _button: {fileID: 708425690098383594}
-  _levelNumberText: {fileID: 0}
-  _levelNameText: {fileID: 0}
+  _levelNumberText: {fileID: 8365200011971092871}
+  _levelNameText: {fileID: 8365200011971092871}
   _partTimeText: {fileID: 0}
   _bestTimeText: {fileID: 0}
-  _titleText: {fileID: 0}
+  _titleText: {fileID: 8365200011971092871}
   _lockedRoot: {fileID: 0}
 --- !u!1 &5675431391407666065
 GameObject:

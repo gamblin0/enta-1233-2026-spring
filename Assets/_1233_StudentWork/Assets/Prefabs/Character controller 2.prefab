@@ -181,6 +181,10 @@ MonoBehaviour:
   jumpPower: 3
   maxNumberOfJumps: 1
   _health: {fileID: 7106385866113673177}
+  _isAttacking: 0
+  _grenadePrefab: {fileID: 0}
+  _grenadeThrowForce: 12
+  _grenadeArcAngle: 30
   _animator: {fileID: 1735874908933194212}
 --- !u!114 &7106385866113673177
 MonoBehaviour:
@@ -808,6 +812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2440250486915398154}
   - component: {fileID: 9112664498699934671}
+  - component: {fileID: 398939201283328581}
   m_Layer: 0
   m_Name: VirtualCam
   m_TagString: Untagged
@@ -823,7 +828,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7373070044464321737}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.4332267, y: -0.53149086, z: 0.3659367, w: 0.6292237}
   m_LocalPosition: {x: 33.6, y: 88.144, z: -5.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -850,7 +855,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 0}
+    TrackingTarget: {fileID: 7520842609605234509}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -873,6 +878,19 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &398939201283328581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7373070044464321737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e8b78ac948f05a46a6d8339a503172b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LookAtOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &8075844669286685097
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,7 +905,7 @@ GameObject:
   - component: {fileID: 1712451121705501657}
   m_Layer: 0
   m_Name: FollowCam
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1127,6 +1145,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5515783359193845756, guid: 56b4a0ca8daa0154387f58eb3154ab99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.00000032022731
+      objectReference: {fileID: 0}
+    - target: {fileID: -5515783359193845756, guid: 56b4a0ca8daa0154387f58eb3154ab99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.0000028244665
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 56b4a0ca8daa0154387f58eb3154ab99, type: 3}
       propertyPath: m_Name
       value: Barbarian (1)
@@ -1151,6 +1177,14 @@ PrefabInstance:
       propertyPath: _footstepSource
       value: 
       objectReference: {fileID: 6381180465128956707}
+    - target: {fileID: 7214371169738337839, guid: 56b4a0ca8daa0154387f58eb3154ab99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.00000020620398
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214371169738337839, guid: 56b4a0ca8daa0154387f58eb3154ab99, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.0000025856134
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

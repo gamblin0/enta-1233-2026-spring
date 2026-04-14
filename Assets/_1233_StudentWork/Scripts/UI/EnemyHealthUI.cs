@@ -1,67 +1,47 @@
-using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.Cinemachine;
 
-public class EnemyHealthUI : MonoBehaviour
+public class HealthBar : MonoBehaviour
 {
-    [SerializeField] private Health _health;
+    private Camera _mainCamera;
+
     [SerializeField] private Image _healthFillImage;
-    [SerializeField] private Vector3 _offset = new Vector3 (0, 2f, 0);
 
-    private Camera _camera;
+    [SerializeField] private Health _enemyHealth;
 
-    
-    private void Awake()
+    private void Start()
     {
-        _camera = Camera.main;
-
-        if (_health == null )
-            _health = GetComponentInParent<Health>();
+        _enemyHealth.OnHealthChanged += RefreshHealthBar;
+        if (_enemyHealth != null) _enemyHealth.OnDied += DisableBar;
+        RefreshHealthBar(_enemyHealth);
     }
 
-    private void OnEnable()
+    private void Update()
     {
-        if (_health == null) return;
-
-        _health.OnHealthChanged += UpdateHealthBar;
-        _health.OnDied += Hide;
-        _health.OnReset += Show;
-
-        UpdateHealthBar(_health);
+        _mainCamera = Camera.main;
+        AlignCamera();
+    }
+    private void AlignCamera()
+    {
+        if (_mainCamera != null)
+        {
+            var camXform = _mainCamera.transform;
+            var forward = transform.position - camXform.position;
+            forward.Normalize();
+            var up = Vector3.Cross(forward, camXform.right);
+            transform.rotation = Quaternion.LookRotation(forward, up);
+        }
     }
 
-    private void OnDisable()
-    {
-        if (_health == null) return;
-
-        _health.OnHealthChanged -= UpdateHealthBar;
-        _health.OnDied -= Hide;
-        _health.OnReset -= Show;
-
-        UpdateHealthBar(_health);
-    }
-
-    private void UpdateHealthBar(Health health)
+    private void RefreshHealthBar(Health health)
     {
         if (_healthFillImage == null) return;
-        _healthFillImage.fillAmount = health.NormalizedHealth;
+        _healthFillImage.fillAmount = health != null ? health.NormalizedHealth : 0f;
     }
 
-    private void Hide()
+    private void DisableBar()
     {
-        gameObject.SetActive(false);
-    }
-
-    private void Show()
-    {
-        gameObject.SetActive(true);
-    }
-
-    private void LateUpdate()
-    {
-        if (_camera == null || _health == null) return;
-
-        transform.position = _health.transform.position + _offset;
-        transform.rotation = _camera.transform.rotation;
+        Destroy(gameObject);
     }
 }

@@ -6,7 +6,7 @@ public class SwordAttack : MonoBehaviour
 
     [SerializeField] private float attackRadius = 2f;
     [SerializeField] private float attackAngle = 60f;
-    [SerializeField] private int damage = 30;
+    [SerializeField] private int damage = 10;
     [SerializeField] private LayerMask enemies;
 
     [SerializeField] private Transform attackOrigin;
@@ -21,7 +21,7 @@ public class SwordAttack : MonoBehaviour
 
             float angle = Vector3.Angle(attackOrigin.forward, directionToTarget);
 
-            if (angle <= attackAngle * 0.5f)
+            if (angle * 0.5f <= attackAngle  )
             {
                 IDamageReciever damageReciever = hit.GetComponent<IDamageReciever>();
 

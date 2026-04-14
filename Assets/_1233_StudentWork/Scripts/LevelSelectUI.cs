@@ -1,9 +1,13 @@
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class LevelSelectUI : MenuBase
 {
     [SerializeField] private Transform _contentParent;
     [SerializeField] private LevelSelectEntry _entryPrefab;
+
+    
 
     public override GameMenus MenuType()
     {
@@ -12,8 +16,10 @@ public class LevelSelectUI : MenuBase
 
     void Start()
     {
+       
         BuildEntries();
     }
+   
 
     public void ButtonBack()
     {
