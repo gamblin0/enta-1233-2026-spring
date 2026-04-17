@@ -25,8 +25,8 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubtractiveShadowColor: {r: 0.36672303, g: 0.44182268, b: 0.6320754, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 369b9ebe3a62b904dbc19bd332b44086, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -184,6 +184,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2238776733389315661, guid: 2f5efa92d3212d34e9fb3ecb9ad7183a, type: 3}
+      propertyPath: _enemyHealth
+      value: 
+      objectReference: {fileID: 1784396147}
     - target: {fileID: 3763997027963242431, guid: 2f5efa92d3212d34e9fb3ecb9ad7183a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.61
@@ -3870,6 +3874,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ab6a5d644a7bee4badd9f783cc2455b, type: 3}
+--- !u!114 &1784396147 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7795561983066354214, guid: 1ab6a5d644a7bee4badd9f783cc2455b, type: 3}
+  m_PrefabInstance: {fileID: 1784396146}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ed4d22bfd8f1884e94d9ce1837b506b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1823467899
 GameObject:
   m_ObjectHideFlags: 0
@@ -4692,10 +4707,6 @@ PrefabInstance:
     - target: {fileID: 2141198433199341608, guid: f3014acc079237547a14ccb6f0adc49b, type: 3}
       propertyPath: m_Name
       value: spike NavMash
-      objectReference: {fileID: 0}
-    - target: {fileID: 2141198433199341608, guid: f3014acc079237547a14ccb6f0adc49b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5393631338401260296, guid: f3014acc079237547a14ccb6f0adc49b, type: 3}
       propertyPath: '_patrolPoints.Array.data[0]'

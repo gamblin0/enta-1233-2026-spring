@@ -17,7 +17,12 @@ public class AudioMgr : Singleton<AudioMgr>
         MainMenu = 0,
         Gameplay = 1
     }
-    
+
+    public void StopMusic()
+    {
+        MusicPlayer.Stop();
+    }
+
     /// <summary>
     ///  Reused sound clips enum, these should match <see cref="AudioMgr._reusableSoundClips"/>
     /// </summary>
@@ -27,6 +32,8 @@ public class AudioMgr : Singleton<AudioMgr>
         ButtonHover = 1,
         ButtonError = 2,
     }
+
+    private AudioClip _currentMusic;
     
     /// <summary>
     /// Main audio mixer
@@ -157,7 +164,15 @@ public class AudioMgr : Singleton<AudioMgr>
     [UsedImplicitly] // Use when appropriate
     public void PlayMusic(AudioClip clip, float volumeMod)
     {
-        if (volumeMod <= 0f) return;
+        if (volumeMod <= 0f || clip == null) return;
+
+        
+        if (_currentMusic == clip && MusicPlayer.isPlaying)
+            return;
+
+        _currentMusic = clip;
+
+        MusicPlayer.Stop(); // ensure clean switch
         MusicPlayer.clip = clip;
         MusicPlayer.volume = volumeMod;
         MusicPlayer.loop = true;

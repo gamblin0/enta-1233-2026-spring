@@ -4,7 +4,7 @@ public class MusicStarter : MonoBehaviour
 {
     [SerializeField] private AudioMgr.MusicTypes _Song;
 
-    private void OnEnable()
+    private void Start()
     {
         AudioMgr.Instance.PlayMusic(_Song, 1);
     }

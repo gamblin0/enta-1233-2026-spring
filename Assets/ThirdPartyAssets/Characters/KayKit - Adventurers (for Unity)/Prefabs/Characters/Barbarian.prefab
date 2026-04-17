@@ -240,7 +240,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: -8995212700073126884}
-  m_LocalEulerAnglesHint: {x: 0.0000002723528, y: 0.0000024155563, z: -90.00001}
+  m_LocalEulerAnglesHint: {x: 0.00000032022731, y: 0.0000028244665, z: -90.00001}
 --- !u!1 &-6415790494268509736
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,7 +861,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: -4361254235543792588}
-  m_LocalEulerAnglesHint: {x: 0.00000021445513, y: -0.0000026890757, z: 90.00001}
+  m_LocalEulerAnglesHint: {x: 0.00000020620398, y: -0.0000025856134, z: 90.00001}
 --- !u!1 &-129758803659467788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,6 +1019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _swordAttack: {fileID: 0}
+  _player: {fileID: 0}
 --- !u!1 &2870523794981691266
 GameObject:
   m_ObjectHideFlags: 0
