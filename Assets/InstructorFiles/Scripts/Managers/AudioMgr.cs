@@ -17,7 +17,12 @@ public class AudioMgr : Singleton<AudioMgr>
         MainMenu = 0,
         Gameplay = 1
     }
-    
+
+    public void StopMusic()
+    {
+        MusicPlayer.Stop();
+    }
+
     /// <summary>
     ///  Reused sound clips enum, these should match <see cref="AudioMgr._reusableSoundClips"/>
     /// </summary>
@@ -27,6 +32,8 @@ public class AudioMgr : Singleton<AudioMgr>
         ButtonHover = 1,
         ButtonError = 2,
     }
+
+    private AudioClip _currentMusic;
     
     /// <summary>
     /// Main audio mixer
@@ -66,7 +73,11 @@ public class AudioMgr : Singleton<AudioMgr>
     /// </summary>
     public float GlobalVolume
     {
-        set => SaveUtil.SavedValues.GlobalVolume = value;
+        set
+        {
+            SaveUtil.SavedValues.GlobalVolume = value;
+            _mixer.SetFloat("MasterVol", GlobalVolume);
+        }
         get => SaveUtil.SavedValues.GlobalVolume;
     }
     
@@ -75,7 +86,11 @@ public class AudioMgr : Singleton<AudioMgr>
     /// </summary>
     public float MusicVolume
     {
-        set => SaveUtil.SavedValues.MusicVolume = value;
+        set 
+        { 
+            SaveUtil.SavedValues.MusicVolume = value;
+            _mixer.SetFloat("MusicVol", MusicVolume);
+        }
         get => SaveUtil.SavedValues.MusicVolume;
     }
     
@@ -84,7 +99,11 @@ public class AudioMgr : Singleton<AudioMgr>
     /// </summary>
     public float SfxVolume
     {
-        set => SaveUtil.SavedValues.SfxVolume = value;
+        set
+        {
+            SaveUtil.SavedValues.SfxVolume = value;
+            _mixer.SetFloat("SfxVol", SfxVolume);
+        }
         get => SaveUtil.SavedValues.SfxVolume;
     }
     
@@ -145,7 +164,15 @@ public class AudioMgr : Singleton<AudioMgr>
     [UsedImplicitly] // Use when appropriate
     public void PlayMusic(AudioClip clip, float volumeMod)
     {
-        if (volumeMod <= 0f) return;
+        if (volumeMod <= 0f || clip == null) return;
+
+        
+        if (_currentMusic == clip && MusicPlayer.isPlaying)
+            return;
+
+        _currentMusic = clip;
+
+        MusicPlayer.Stop(); // ensure clean switch
         MusicPlayer.clip = clip;
         MusicPlayer.volume = volumeMod;
         MusicPlayer.loop = true;

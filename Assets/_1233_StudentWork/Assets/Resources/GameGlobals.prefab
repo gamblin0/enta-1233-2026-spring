@@ -80,9 +80,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _willNotDestroyOnLoad: 0
-  _levelSceneNames:
-  - Level_1
-  - Level_2
+  _allLevelData:
+  - SceneName: Level_1
+    LevelName: Level 1
+    LevelIcon: {fileID: 0}
+  - SceneName: Level_2
+    LevelName: Level 2
+    LevelIcon: {fileID: 0}
+  - SceneName: Level_3
+    LevelName: Level 3
+    LevelIcon: {fileID: 0}
+  - SceneName: Level_4
+    LevelName: Level 4
+    LevelIcon: {fileID: 0}
 --- !u!1001 &1317282792931358156
 PrefabInstance:
   m_ObjectHideFlags: 0

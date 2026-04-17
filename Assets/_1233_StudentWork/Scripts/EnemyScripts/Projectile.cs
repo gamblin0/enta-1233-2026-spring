@@ -1,4 +1,4 @@
-using UnityEditor.Experimental.GraphView;
+
 using UnityEngine;
 
 [RequireComponent (typeof(Rigidbody))]
@@ -8,10 +8,19 @@ public class Projectile : MonoBehaviour
     [SerializeField] private int _damage = 10;
     [SerializeField] private float _speed = 20f;
     [SerializeField] private float _lifetime = 5f;
-    [SerializeField] private bool _useGravity;
+    [SerializeField] private bool _useGravity;   
 
     private Rigidbody _rb;
     private GameObject _source;
+
+  #region Particle
+    [SerializeField] private GameObject _impactVfxPrefab;
+
+    void SpawnImpact(Vector3 position)
+    {
+        Instantiate(_impactVfxPrefab, position, Quaternion.identity);
+    }
+  #endregion
 
     private void Awake()
     {
@@ -37,6 +46,8 @@ public class Projectile : MonoBehaviour
             };
             damageReciever.ApplyDamage(info);
         }
+
+        SpawnImpact(collision.contacts[0].point);
 
         //destroy on impact
         Destroy(gameObject);

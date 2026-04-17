@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_1233_StudentWork/Scenes/Level_2.unity
     guid: bb189c75d8ba3f24fbfad6ac00b45487
+  - enabled: 1
+    path: Assets/_1233_StudentWork/Scenes/Level_3.unity
+    guid: 52559203c6d35e645a816f26695709e5
+  - enabled: 1
+    path: Assets/_1233_StudentWork/Scenes/Level_4.unity
+    guid: f23493421e28abc42b17f02766c79115
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 6c27c8dedc78d4940adf1a8d063801a7, type: 3}
   m_UseUCBPForAssetBundles: 0

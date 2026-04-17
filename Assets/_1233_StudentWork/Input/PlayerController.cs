@@ -24,6 +24,18 @@ public class PlayerController : MonoBehaviour
     private int _numberOfjumps;
     [SerializeField] private int maxNumberOfJumps = 2;
 
+    [SerializeField] private Health _health;
+
+    [SerializeField] private bool _isAttacking;
+
+    [SerializeField] private Grenade _grenadePrefab;
+
+    [SerializeField] private float _grenadeThrowForce = 12f;
+
+    [SerializeField] private float _grenadeArcAngle = 30f;
+
+    
+
 
     [SerializeField] private Animator _animator;
     private static readonly int Speed = Animator.StringToHash("Speed");
@@ -36,8 +48,31 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        _characterController = GetComponent<CharacterController>(); //gets ChracterController Componnent
+       if (_characterController == null) _characterController = GetComponent<CharacterController>(); //gets ChracterController Componnent
+       if(_health == null) _health = GetComponent<Health>();
+
     }
+
+    private void OnEnable()
+    {
+        if (_health != null)
+        {
+            _health.OnDamaged += HandleDamaged;
+            _health.OnDied += HandleDied;
+        }
+        
+    }
+
+    private void OnDisable()
+    {
+        if (_health != null)
+        {
+            _health.OnDamaged -= HandleDamaged;
+            _health.OnDied -= HandleDied;
+        }
+    }
+
+   
 
     private void Update()
     {
@@ -61,6 +96,9 @@ public class PlayerController : MonoBehaviour
     {
         _characterController.Move(_direction * speed * Time.deltaTime); // allows us to move and makes it depend on frame rate
     }
+
+   
+
 
     private void ApplyGravity()
     {
@@ -103,6 +141,13 @@ public class PlayerController : MonoBehaviour
         _velocity = jumpPower; //makes character jump
     }
 
+    public void Attack(InputAction.CallbackContext context)
+    {
+        if (!context.started) return;
+        _animator?.SetTrigger("Attack");
+        
+    }
+
     private IEnumerator WaitForLanding() //after landing, reset the jump amount so player can jump again
     {
         yield return new WaitUntil(() => !IsGrounded()); //wait until chracter is in the air
@@ -113,4 +158,30 @@ public class PlayerController : MonoBehaviour
 
     private bool IsGrounded() => _characterController.isGrounded; //we can call IsGrounded instead of writing _characterController.isGrounded
 
+
+    private void HandleDamaged(DamageInfo info)
+    {
+        Debug.Log(
+           $"[Dummy] Hit by" +
+           $"{info.Source?.name ?? "Unknown"} " +
+           $"for {info.Amount} damage" +
+           $"HP: {_health.CurrentHealth}/{_health.MaxHealth}");
+        if (_health.CurrentHealth > 0)
+            _animator?.SetTrigger("Hit");
+    }
+    private void HandleDied()
+    {
+        Debug.Log("[Dummy] Died! Resetting..");
+        _animator?.SetTrigger("Die");
+        _characterController = null;
+        enabled = false;
+        StartCoroutine(GameOverTransition());
+    }
+
+    private IEnumerator GameOverTransition()
+    {
+        yield return new WaitForSeconds(1f);
+
+        GameMgr.Instance.GameOver();
+    }
 }

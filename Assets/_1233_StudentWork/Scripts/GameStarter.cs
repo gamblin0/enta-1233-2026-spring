@@ -7,6 +7,7 @@ public class GameStarter : MonoBehaviour
     private void Start()
     {
         StartCoroutine(StartWhenReady());
+        AudioMgr.Instance.StopMusic();
     }
 
     // Frequently called
